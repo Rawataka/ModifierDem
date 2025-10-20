@@ -16,6 +16,8 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.Image
+import androidx.compose.ui.res.painterResource
 import com.example.modifierdemo.ui.theme.ModifierDemoTheme
 
 class MainActivity : ComponentActivity() {
@@ -52,4 +54,12 @@ fun DefaultPreview() {
     ModifierDemoTheme {
         DemoScreen()
     }
+}
+@Composable
+fun CustomImage(image: Int, modifier: Modifier = Modifier) {
+    Image(
+        painter = painterResource(image),
+        contentDescription = null,
+        modifier
+    )
 }
